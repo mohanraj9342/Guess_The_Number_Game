@@ -2,6 +2,14 @@
 
 A Python project featuring both a terminal and a Streamlit web version of the classic "Guess The Number" game.
 
+---
+
+## 🚀 Try the Web App
+
+👉 [Play Guess The Number Online!](https://mohanraj9342-guess-the-nu-guess-the-number-streamlit-app-yyhepn.streamlit.app/)
+
+---
+
 ## Contents
 
 - `Guess_The_Number.py` — Terminal version (play in your console)

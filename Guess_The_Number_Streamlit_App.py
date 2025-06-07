@@ -99,3 +99,14 @@ if st.session_state.show_hint and not st.session_state.hint_used and not st.sess
                 st.info("➗ Hint 3: The number is NOT a multiple of 3, 4, or 7.")
 
         st.session_state.show_hint = False
+
+st.sidebar.title("About")
+st.sidebar.markdown("""
+- 🎯 **Guess The Number Game**: Try to guess the secret number between 1 and 100.
+- 🕹️ You have 10 attempts.
+- 💡 Use hints (with a score penalty) after 5 attempts.
+- 🏆 Score is based on attempts and hint usage.
+
+**Author:** Mohanraj Velayutham  
+[GitHub](https://github.com/mohanraj9342)
+""")
