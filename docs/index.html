@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>🎯 Guess The Number – Play Online</title>
+    <meta name="description" content="Guess the secret number between 1 and 100 in 10 tries. Use hints (costs points). A fast, fun number guessing game!" />
+    <meta name="theme-color" content="#6c5ce7" />
+    <meta property="og:title" content="🎯 Guess The Number – Play Online" />
+    <meta property="og:description" content="Guess a number 1–100 in 10 tries. Optional hints with score penalty." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/mohanraj9342/Guess_The_Number_Game/main/docs/og-cover.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%8E%AF%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>🎯 Guess The Number</h1>
+      <p class="tagline">Pick a number between 1 and 100. You get 10 tries. Hints available after 5 tries (−5 points).</p>
+    </header>
+
+    <main>
+      <section class="card" aria-live="polite">
+        <div class="scorebar">
+          <div class="score-item"><span class="label">Attempts Left</span><span id="attemptsLeft" class="value">10</span></div>
+          <div class="score-item"><span class="label">Score</span><span id="score" class="value">100</span></div>
+        </div>
+
+        <div class="input-row">
+          <label for="guessInput" class="sr-only">Enter your guess (1 to 100)</label>
+          <input id="guessInput" type="number" min="1" max="100" placeholder="Enter a number…" />
+          <button id="guessBtn" class="btn primary">Submit Guess</button>
+        </div>
+
+        <p id="message" class="message">I'm thinking of a number between 1 and 100.</p>
+
+        <div id="hintGate" class="hint-gate hidden">
+          <div class="hint-note">⚠️ After 5 attempts, you can use a hint. Using a hint reduces your final score by 5 points.</div>
+          <button id="hintBtn" class="btn warning">💡 Use Hint (−5)</button>
+        </div>
+
+        <div id="hints" class="hints hidden" aria-live="polite"></div>
+
+        <details class="history">
+          <summary>Guess history</summary>
+          <ul id="historyList"></ul>
+        </details>
+
+        <div class="actions">
+          <button id="playAgainBtn" class="btn" hidden>Play Again</button>
+          <button id="resetBtn" class="btn ghost">Reset</button>
+        </div>
+      </section>
+
+      <section class="about card slim">
+        <h2>About</h2>
+        <ul>
+          <li>10 attempts to guess the secret number between 1 and 100.</li>
+          <li>Hints unlock after the 5th attempt and cost 5 points.</li>
+          <li>Final score: (Attempts left × 10) minus hint penalty.</li>
+        </ul>
+  <div class="links"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Built with ❤️ using HTML/CSS/JS</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+  </html>
